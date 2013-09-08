@@ -7,14 +7,9 @@ Create a writable file stream without checking if a directory exists. Like mkdir
 
 ```js
 var wsp = require('writestreamp');
-var ws = wsp('some/dir/that/might/not/exist/file');
+var ws = wsp('some/dir/that/might/not/exist/file', options);
 readStream.pipe(ws);
 ```
-
-# API
-
-WriteStream
-
 
 # Install
 
