@@ -2,7 +2,7 @@
   "name": "writestreamp",
   "description": "A file write stream that creates its directory if it does not exist",
   "keywords": ["writable", "stream", "file", "mkdir", "mkdirp"],
-  "version": "0.1.0",
+  "version": "v0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/fent/node-writestreamp.git"
