@@ -1,0 +1,26 @@
+{
+  "name": "writestreamp",
+  "description": "A file write stream that creates its directory if it does not exist",
+  "keywords": ["writable", "stream", "file", "mkdir", "mkdirp"],
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fent/node-writestreamp.git"
+  },
+  "author": "fent (https://github.com/fent)",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha -R spec test/*-test.js"
+  },
+  "dependencies": {
+    "mkdirp": "~0.3.5",
+    "streamify": "~0.2.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url" : "http://github.com/fent/node-writestreamp/raw/master/LICENSE"
+  }]
+}
