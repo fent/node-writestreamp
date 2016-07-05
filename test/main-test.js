@@ -8,8 +8,14 @@ var dirpath = path.join(__dirname, 'dir1');
 var filepath = path.join(__dirname, 'dir1', 'file.txt');
 
 describe('Create write stream', function() {
-  if('Directory should not exist', function(done) {
-    fs.unlink(dirpath, done);
+  before(function() {
+    if (fs.existsSync(dirpath)) {
+      fs.readdirSync(dirpath).forEach(function(file) {
+        var filepath = path.resolve(dirpath, file);
+        fs.unlinkSync(filepath);
+      });
+      fs.rmdirSync(dirpath);
+    }
   });
 
   it('On a directory that does not exist', function(done) {
