@@ -2,7 +2,9 @@
 
 Create a writable file stream without checking if a directory exists. Like mkdirp with files.
 
-[![Build Status](https://secure.travis-ci.org/fent/node-writestreamp.png)](http://travis-ci.org/fent/node-writestreamp) [![Dependency Status](https://gemnasium.com/fent/node-writestreamp.svg)](https://gemnasium.com/fent/node-writestreamp)
+[![Build Status](https://secure.travis-ci.org/fent/node-writestreamp.svg)](http://travis-ci.org/fent/node-writestreamp)
+[![Dependency Status](https://gemnasium.com/fent/node-writestreamp.svg)](https://gemnasium.com/fent/node-writestreamp)
+[![codecov](https://codecov.io/gh/fent/node-writestreamp/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/node-writestreamp)
 
 # Usage
 
