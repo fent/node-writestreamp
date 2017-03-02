@@ -11,19 +11,25 @@ var filepath2 = path.join(__dirname, 'dir2', 'dir22', 'file.txt');
 
 describe('Create write stream', function() {
   describe('On a directory that does not exist', function() {
-    before(function() {
-      if (fs.existsSync(dirpath1)) {
-        fs.readdirSync(dirpath1).forEach(function(file) {
-          var filepath1 = path.resolve(dirpath1, file);
-          fs.unlinkSync(filepath1);
+    before(function(done) {
+      fs.readdir(dirpath1, function(err, files) {
+        if (err) { return done(); }
+        if (!files.length) { return fs.rmdir(dirpath1, done); }
+        var total = 0;
+        files.forEach(function(file) {
+          var filepath = path.resolve(dirpath1, file);
+          fs.unlink(filepath, function() {
+            if (++total === files.length) {
+              fs.rmdir(dirpath1, done);
+            }
+          });
         });
-        fs.rmdirSync(dirpath1);
-      }
+      });
     });
 
     it('Creates the directory and file', function(done) {
-      fs.exists(dirpath1, function(exists) {
-        assert.ok(!exists);
+      fs.stat(dirpath1, function(err) {
+        assert.ok(err);
         var ws = wsp(filepath1);
         ws.write('hello world\n');
         ws.end('hey there');
