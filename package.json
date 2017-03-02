@@ -8,7 +8,7 @@
     "mkdir",
     "mkdirp"
   ],
-  "version": "0.1.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/fent/node-writestreamp.git"
@@ -26,6 +26,8 @@
     "istanbul": "*",
     "mocha": "*"
   },
-  "engines": { "node": ">=0.12" },
+  "engines": {
+    "node": ">=0.12"
+  },
   "license": "MIT"
 }
