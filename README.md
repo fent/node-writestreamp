@@ -25,6 +25,3 @@ Tests are written with [mocha](https://mochajs.org)
 ```bash
 npm test
 ```
-
-# License
-MIT
