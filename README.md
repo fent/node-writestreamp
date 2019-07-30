@@ -4,7 +4,7 @@ Create a writable file stream without checking if a directory exists. Like mkdir
 
 [![Build Status](https://secure.travis-ci.org/fent/node-writestreamp.svg)](http://travis-ci.org/fent/node-writestreamp)
 [![Dependency Status](https://david-dm.org/fent/node-writestreamp.svg)](https://david-dm.org/fent/node-writestreamp)
-[![codecov](https://codecov.io/gh/fent/node-writestreamp/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/node-writestreamp)
+[![codecov](https://codecov.io/gh/fent/node-writestreamp/branch/master/graph/badge.svg)](https://codecov.io/gh/fent/node-writestreamp) [![Greenkeeper badge](https://badges.greenkeeper.io/fent/node-writestreamp.svg)](https://greenkeeper.io/)
 
 # Usage
 
