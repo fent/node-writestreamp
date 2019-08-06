@@ -15,9 +15,9 @@ describe('Create write stream', () => {
       fs.readdir(dirpath1, (err, files) => {
         if (err) { return done(); }
         if (!files.length) { return fs.rmdir(dirpath1, done); }
-        var total = 0;
+        let total = 0;
         files.forEach((file) => {
-          var filepath = path.resolve(dirpath1, file);
+          let filepath = path.resolve(dirpath1, file);
           fs.unlink(filepath, () => {
             if (++total === files.length) {
               fs.rmdir(dirpath1, done);
@@ -30,12 +30,12 @@ describe('Create write stream', () => {
     it('Creates the directory and file', (done) => {
       fs.stat(dirpath1, (err) => {
         assert.ok(err);
-        var ws = wsp(filepath1);
+        let ws = wsp(filepath1);
         ws.write('hello world\n');
         ws.end('hey there');
         ws.once('finish', () => {
           fs.readFile(filepath1, 'utf8', (err, data) => {
-            if (err) { return done(err); }
+            assert.ifError(err);
             assert.equal('hello world\nhey there', data);
             fs.unlink(filepath1, () => {
               fs.rmdir(dirpath1, done);
@@ -54,7 +54,7 @@ describe('Create write stream', () => {
     });
 
     it('Stream emits error', (done) => {
-      var ws = wsp(filepath2);
+      let ws = wsp(filepath2);
       ws.on('error', (err) => {
         assert.ok(err);
         assert.equal(err.code, 'EACCES');
