@@ -22,7 +22,7 @@
     "test": "istanbul cover node_modules/.bin/_mocha -- test/*-test.js"
   },
   "dependencies": {
-    "mkdirp": "~0.5.0",
+    "mkdirp": "^1.0.4",
     "streamify": "~1.0.0"
   },
   "devDependencies": {
