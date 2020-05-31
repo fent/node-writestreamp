@@ -1,5 +1,7 @@
 # node-writestreamp
 
+### * Abandoned *
+
 Create a writable file stream without checking if a directory exists. Like mkdirp with files.
 
 [![Build Status](https://secure.travis-ci.org/fent/node-writestreamp.svg)](http://travis-ci.org/fent/node-writestreamp)
